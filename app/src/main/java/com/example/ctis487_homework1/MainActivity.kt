@@ -8,9 +8,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val switchButton: Button = findViewById(R.id.button2)
-        switchButton.setOnClickListener {
-            setContentView(R.layout.activity_second)
+        val startButton:Button = findViewById(R.id.startButton)
+
+        startButton.setOnClickListener{
+            setContentView(R.layout.second_activity)
         }
 
     }
