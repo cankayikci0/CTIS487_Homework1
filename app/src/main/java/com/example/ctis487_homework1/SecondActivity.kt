@@ -54,9 +54,6 @@ class SecondActivity : AppCompatActivity() {
         }
 
 
-
-
-
         getterIntent = getIntent()
         val b = getterIntent.getExtras()
 

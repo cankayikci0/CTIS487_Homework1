@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-  <androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -14,6 +14,75 @@
       android:text="TextView"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-  </androidx.constraintlayout.widget.ConstraintLayout>
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.69" />
+
+  <ScrollView
+      android:layout_width="391dp"
+      android:layout_height="500dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/textView13"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:text="Scroll To the Bottom"
+          android:textSize="40sp" />
+
+      <ImageView
+          android:id="@+id/movieImage"
+          android:layout_width="match_parent"
+          android:layout_height="350dp"
+          android:layout_marginTop="30dp"
+          android:src="@drawable/godfather" />
+
+      <TextView
+          android:id="@+id/movieName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:text="TextView"
+          android:textAlignment="center"
+          android:textSize="32sp" />
+
+      <TextView
+          android:id="@+id/storyTelling"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:text="TextView"
+          android:textAlignment="center"
+          android:textSize="32sp" />
+
+      <TextView
+          android:id="@+id/cinematography"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:text="TextView"
+          android:textAlignment="center"
+          android:textSize="32sp" />
+
+      <TextView
+          android:id="@+id/acting"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:text="TextView"
+          android:textAlignment="center"
+          android:textSize="32sp" />
+    </LinearLayout>
+  </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

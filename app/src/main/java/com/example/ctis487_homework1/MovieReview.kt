@@ -8,14 +8,13 @@ class MovieReview(var name: String) : Parcelable{
     var storyTelling: Int = 0
     var cinematography: Int = 0
     var acting: Int = 0
-    lateinit var imgPath : String
+
 
     // Primary constructor
     constructor(name: String, storyTelling: Int, cinematography: Int, acting: Int) : this(name) {
         this.storyTelling = storyTelling
         this.cinematography = cinematography
         this.acting = acting
-        this.imgPath = imgPath
     }
 
     // Member method
@@ -44,6 +43,8 @@ class MovieReview(var name: String) : Parcelable{
         return 0
     }
     companion object CREATOR : Parcelable.Creator<MovieReview> {
+
+
         override fun createFromParcel(parcel: Parcel): MovieReview {
             return MovieReview(parcel)
         }
