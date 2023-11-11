@@ -44,7 +44,7 @@ class MovieReview(var name: String) : Parcelable{
     }
     companion object CREATOR : Parcelable.Creator<MovieReview> {
 
-
+        //a
         override fun createFromParcel(parcel: Parcel): MovieReview {
             return MovieReview(parcel)
         }
