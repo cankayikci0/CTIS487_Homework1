@@ -1,17 +1,18 @@
 package com.example.ctis487_homework1
 
+import additional_package.MovieReview
 import additional_package.ThirdActivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
 import android.widget.AdapterView
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.Spinner
 import android.widget.TextView
+import android.widget.Toast
 
 class SecondActivity : AppCompatActivity() {
 
@@ -22,7 +23,7 @@ class SecondActivity : AppCompatActivity() {
     lateinit var stBar:SeekBar
     lateinit var ctBar:SeekBar
     lateinit var actBar:SeekBar
-    lateinit var movie:MovieReview
+    lateinit var movie: MovieReview
 
     /*
     var godfatherMovie = MovieReview("Godfather")
@@ -48,6 +49,7 @@ class SecondActivity : AppCompatActivity() {
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View, i: Int, id: Long) {
                 imageSP.setImageResource(imgIds[i])
+                Toast.makeText(this@SecondActivity, spinner.selectedItem.toString() + " is selected", Toast.LENGTH_SHORT).show()
                 //println("heyo")
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {}
@@ -79,6 +81,7 @@ class SecondActivity : AppCompatActivity() {
             }else{
                 movie = MovieReview("Fight Club", stBar.progress, ctBar.progress, actBar.progress)
             }
+
             intentSecond.putExtra("movie", movie)
             startActivity(intentSecond)
             setContentView(R.layout.activity_third)

@@ -1,4 +1,4 @@
-package com.example.ctis487_homework1
+package additional_package
 
 import android.os.Parcel
 import android.os.Parcelable
@@ -8,6 +8,7 @@ class MovieReview(var name: String) : Parcelable{
     var storyTelling: Int = 0
     var cinematography: Int = 0
     var acting: Int = 0
+
 
 
     // Primary constructor
@@ -44,12 +45,12 @@ class MovieReview(var name: String) : Parcelable{
     }
     companion object CREATOR : Parcelable.Creator<MovieReview> {
 
-        //a
+        const val COMMON_SCORE = 55
         override fun createFromParcel(parcel: Parcel): MovieReview {
             return MovieReview(parcel)
         }
-        fun getDefaultMovieReview(name: String): MovieReview {
-            return MovieReview(name)
+        fun getDefaultMovieReview(point: Double): String {
+            return if (point > COMMON_SCORE) "It Is a Great Film" else "It Is not a Great Film"
         }
         override fun newArray(size: Int): Array<MovieReview?> {
             return arrayOfNulls(size)
